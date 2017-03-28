@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuppliesComponent implements OnInit {
 
+  supplies = [{
+    type: 'flowers',
+    instock: 8,
+    description: 'Inseason Plants of various sizes'
+
+  },
+  {
+  type: 'trees',
+  instock: 22,
+  description: 'Various Trees'
+}];
+
   constructor() { }
 
   ngOnInit() {

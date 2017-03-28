@@ -1,3 +1,13 @@
-<p>
-  supplies works!
-</p>
+
+<ul>
+
+  <li *ngFor = "let item of supplies">
+    <h2>{{item.type | uppercase}}</h2>
+    <p>
+      {{item.instock}}
+    </p>
+    <p>
+      {{item.description}}
+    </p>
+  </li>
+</ul>
