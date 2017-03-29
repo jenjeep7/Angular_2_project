@@ -3,6 +3,8 @@
 
   <li *ngFor = "let item of supplies">
     <h2>{{item.type | uppercase}}</h2>
+    <i class="material-icons">local_florist</i>
+
     <p *ngIf = "item.instock > 0">
       # In Stock: {{item.instock}}
     </p>
@@ -17,3 +19,5 @@
     </p>
   </li>
 </ul>
+<md-checkbox></md-checkbox>
+<button md-button>I am a button</button>

@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { SuppliesComponent } from './supplies/supplies.component';
+import { MaterialModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SuppliesComponent } from './supplies/supplies.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
