@@ -27,6 +27,13 @@ export class SuppliesComponent implements OnInit {
   Price: 5.99
 }];
 
+totalItems() {
+  let total = 0;
+  for(let item of this.supplies) {
+    total += item.instock;
+  }
+  return total;
+}
   constructor() { }
 
   ngOnInit() {

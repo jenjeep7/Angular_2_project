@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { SuppliesComponent } from './supplies/supplies.component';
 import { MaterialModule} from '@angular/material';
+import {MdIconRegistry} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { MaterialModule} from '@angular/material';
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    MdIconRegistry
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
