@@ -3,11 +3,17 @@
 
   <li *ngFor = "let item of supplies">
     <h2>{{item.type | uppercase}}</h2>
-    <p>
-      {{item.instock}}
+    <p *ngIf = "item.instock > 0">
+      # In Stock: {{item.instock}}
+    </p>
+    <p *ngIf = "item.instock === 0">
+      Out of Stock
     </p>
     <p>
-      {{item.description}}
+      Description: {{item.description}}
+    </p>
+    <p>
+      Cost: {{item.Price | currency: 'USD' : true}}
     </p>
   </li>
 </ul>

@@ -10,13 +10,21 @@ export class SuppliesComponent implements OnInit {
   supplies = [{
     type: 'flowers',
     instock: 8,
-    description: 'Inseason Plants of various sizes'
+    description: 'Inseason Plants of various sizes',
+    Price: 13.99
 
   },
   {
   type: 'trees',
   instock: 22,
-  description: 'Various Trees'
+  description: 'Various Trees',
+  Price: 50
+},
+{
+  type: 'potting soil',
+  instock: 0,
+  description: 'Potting soil',
+  Price: 5.99
 }];
 
   constructor() { }
