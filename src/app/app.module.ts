@@ -8,7 +8,7 @@ import { MainComponent } from './main/main.component';
 import { SuppliesComponent } from './supplies/supplies.component';
 import { MaterialModule} from '@angular/material';
 import {MdIconRegistry} from '@angular/material/icon';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import {MdIconRegistry} from '@angular/material/icon';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    FlexLayoutModule
   ],
   providers: [
     MdIconRegistry

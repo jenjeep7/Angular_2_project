@@ -1,30 +1,41 @@
-<md-card>
-  <md-card-content>
 
-      <md-list *ngFor = "let item of supplies">
-        <h2>  <md-icon>local_florist</md-icon>{{item.type | uppercase}}</h2>
-          <p>
-            Total Items In Stock: {{totalItems()}}
-          </p>
-        <md-list-item *ngIf = "item.instock > 0">
-          # In Stock: {{item.instock}}
-        </md-list-item>
-        <md-list-item *ngIf = "item.instock === 0">
-          Out of Stock
-        </md-list-item>
-        <md-list-item>
-          Description: {{item.description}}
-        </md-list-item>
-        <md-list-item>
-          Cost: {{item.Price | currency: 'USD' : true}}
-        </md-list-item>
-      </md-list>
+<div class="containerX">
 
-  </md-card-content>
+  <div [fxLayout]="direction" fxLayoutAlign="center centermateri">
 
-  <md-card-footer>
-    <md-checkbox></md-checkbox>
-    <button md-raised-button>I am a button</button>
-  </md-card-footer>
+    <div fxFlex="50">
 
-</md-card>
+      <md-card>
+        <md-card-content>
+
+          <md-list *ngFor = "let item of supplies">
+            <h2><md-icon>local_florist</md-icon>{{item.type | uppercase}}</h2>
+            <p>
+              Total Items In Stock: {{totalItems()}}
+            </p>
+            <md-list-item *ngIf = "item.instock > 0">
+              # In Stock: {{item.instock}}
+            </md-list-item>
+            <md-list-item *ngIf = "item.instock === 0">
+              Out of Stock
+            </md-list-item>
+            <md-list-item>
+              Description: {{item.description}}
+            </md-list-item>
+            <md-list-item>
+              Cost: {{item.Price | currency: 'USD' : true}}
+            </md-list-item>
+          </md-list>
+
+        </md-card-content>
+
+        <md-card-footer>
+          <md-checkbox></md-checkbox>
+          <button md-raised-button color="accent">I am a button</button>
+        </md-card-footer>
+
+      </md-card>
+    </div>
+
+  </div>
+</div>
