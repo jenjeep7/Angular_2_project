@@ -1,3 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/shared/_variables.scss';
 @import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+
+.featured {
+  border: 1px solid purple;
+}

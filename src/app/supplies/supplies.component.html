@@ -1,14 +1,14 @@
 
 <div class="containerX">
 
-  <div [fxLayout]="direction" fxLayoutAlign="center centermateri">
+  <div [fxLayout]="direction" fxLayoutAlign="center center">
 
     <div fxFlex="50">
 
       <md-card>
         <md-card-content>
 
-          <md-list *ngFor = "let item of supplies">
+          <md-list *ngFor = "let item of supplies" [class.featured] = "item.featured">
             <h2><md-icon>local_florist</md-icon>{{item.type | uppercase}}</h2>
             <p>
               Total Items In Stock: {{totalItems()}}
